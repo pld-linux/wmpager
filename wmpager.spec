@@ -14,10 +14,10 @@ Requires:	XFree86
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Dockapp application for changing active desktop
+Dockapp application for changing active desktop.
 
 %description -l pl
-Aplikacja dokujaca do zmiany aktywnego pulpitu
+Aplikacja dokujaca do zmiany aktywnego pulpitu.
 
 %prep
 %setup -q 
