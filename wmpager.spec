@@ -2,7 +2,7 @@ Summary:	Dockapp for changin active destop
 Summary(pl):	Dockapp do zmiany aktywnego pulpitu
 Name:		wmpager
 Version:	1.2
-Release:	1
+Release:	2
 License:	Free
 Group:		X11/Window Managers/Tools
 Source0:	http://dl.sourceforge.net/sourceforge/wmpager/%{name}-%{version}.tar.gz
@@ -22,6 +22,7 @@ Aplikacja dokujaca do zmiany aktywnego pulpitu.
 %prep
 %setup -q 
 %patch0 -p1
+%{__perl} -pi -e 's@/lib@/%{_lib}@g' src/Makefile
 
 %build
 %{__make}
