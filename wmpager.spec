@@ -5,11 +5,11 @@ Version:	1.2
 Release:	3
 License:	Free
 Group:		X11/Window Managers/Tools
-Source0:	http://dl.sourceforge.net/sourceforge/wmpager/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/wmpager/%{name}-%{version}.tar.gz
 # Source0-md5:	402f6678bc29d5c355e9bc79a28faf59
 Source1:	%{name}.desktop
 Patch0:		%{name}-makefile.patch
-URL:		http://wmpager.sourceforge.net
+URL:		http://wmpager.sourceforge.net/
 BuildRequires:	XFree86-devel
 Requires:	XFree86
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -23,10 +23,11 @@ Aplikacja dokujaca do zmiany aktywnego pulpitu.
 %prep
 %setup -q 
 %patch0 -p1
-%{__perl} -pi -e 's@/lib@/%{_lib}@g' src/Makefile
+%{__perl} -pi -e 's@/lib@/%{_lib}@g;s@gcc -g@%{__cc}@' src/Makefile
 
 %build
-%{__make}
+%{__make} \
+	FLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
