@@ -26,7 +26,7 @@ diff -urN wmpager-1.2.orig/Makefile wmpager-1.2/Makefile
  	chmod 755 ${INSTALLDIR}/bin/wmpager ; \
  	if [ ! -d ${INSTALLDIR}/man/man1 ] ; then \
 -		mkdir -p ${INSTALLDIR}/man/man1 ] ; \
-+		mkdir -p ${INSTALLDIR}/share/man/man1 ] ; \
++		mkdir -p ${INSTALLDIR}/share/man/man1 ; \
  	fi ; \
 -	echo "copying manual page to ${INSTALLDIR}/man/man1" ; \
 -	cp man/man1/wmpager.1x ${INSTALLDIR}/man/man1/wmpager.1x ; \
