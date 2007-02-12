@@ -1,5 +1,5 @@
 Summary:	Dockapp for changing active desktop
-Summary(pl.UTF-8):   Aplet do zmiany aktywnego pulpitu
+Summary(pl.UTF-8):	Aplet do zmiany aktywnego pulpitu
 Name:		wmpager
 Version:	1.2
 Release:	3
