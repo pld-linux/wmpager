@@ -22,7 +22,7 @@ Aplikacja dokujaca do zmiany aktywnego pulpitu.
 
 %prep
 %setup -q 
-%patch0 -p1
+%patch -P0 -p1
 %{__perl} -pi -e 's@/lib@/%{_lib}@g;s@gcc -g@%{__cc}@' src/Makefile
 
 %build
